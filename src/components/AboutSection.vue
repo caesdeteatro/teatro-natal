@@ -110,7 +110,7 @@ export default {
           isFree: false,
         },
         {
-          name: "TOURO {BULL}",
+          name: "TOURO {BULL} ",
           description:
             "TOURO {BULL} É um espetáculo que aborda o tema da ancestralidade feminina a partir do ponto de vista da cultura nordestina. A partir das memórias da dançarina e coreógrafa Valéria Pinheiro, reconstruímos alguns dos arquétipos do imaginário nordestino em formato de uma sinfonia de sapateado, sapateios identitários brasileiros: Brinquedos e folguedos têm passos ritmados e batidas de pé.",
           img: "https://images.sympla.com.br/6604514090600-lg.jpg",
@@ -155,7 +155,7 @@ export default {
       window.open(link, "_blank");
     },
     getEventType(event) {
-      return event == "STAGE" ? "Espetáculo" : "Oficina";
+      return event === "STAGE" ? "Espetáculo" : "Oficina";
     },
     getEventColor(event) {
       return event == "STAGE" ? "#5f27cd" : "#cc2434";
