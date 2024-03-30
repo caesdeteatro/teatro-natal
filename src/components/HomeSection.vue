@@ -25,7 +25,7 @@
 
     <v-row align="center" justify="center" class="teste d-md-none">
       <v-col cols="12">
-        <div class="testere">
+        <div class="testere ">
           <div>
             <Flicking
               :plugins="plugins"
