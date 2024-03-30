@@ -1,11 +1,12 @@
 <template>
   <v-app>
-    <navigation :color="color" :flat="flat" />
     <v-main class="pt-0">
+      <navigation :color="color" :flat="flat" />
       <home />
       <about />
+      <contact />
+      <foote />
     </v-main>
-    <!-- <foote /> -->
   </v-app>
 </template>
 

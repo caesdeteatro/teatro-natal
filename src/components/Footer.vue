@@ -1,60 +1,19 @@
 <template>
-  <v-footer dark padless>
-    <v-card flat tile class="secondary white--text text-center">
-      <v-card-text>
-        <v-btn
-          v-for="(icon, i) in icons"
-          :key="i"
-          class="mx-4 white--text"
-          :href="icon.link"
-          target="_blank"
-          icon
-        >
-          <v-icon size="24px">{{ icon.text }}</v-icon>
-        </v-btn>
-      </v-card-text>
-
-      <v-card-text class="white--text pt-0">
-        Phasellus feugiat arcu sapien, et iaculis ipsum elementum sit amet.
-        Mauris cursus commodo interdum.
-      </v-card-text>
-
-      <v-divider></v-divider>
-
-      <v-card-text class="white--text">
-        {{ new Date().getFullYear() }} — <strong>Calango WEB</strong>
-      </v-card-text>
-    </v-card>
-  </v-footer>
+  <div class="mt-4 mb-4">
+    <div class="d-flex flex-column align-center mb-12">
+      <img src="../assets/img/LOGO_CAES.png" height="64" class="mb-3"/>
+      <span>Desenvolvido por <br/> Cães de Teatro</span>
+    </div>
+  </div>
 </template>
 
-<style scoped>
-.v-card {
-  width: 100%;
+<style scoped></style>
+
+<style lang="scss" scoped>
+span{
+  font-size: 18px;
+  text-align: center;
+  color: #070707;
+  font-weight: 500;
 }
 </style>
-
-<script>
-export default {
-  data: () => ({
-    icons: [
-      {
-        text: "mdi-facebook",
-        link: "",
-      },
-      {
-        text: "mdi-twitter",
-        link: "",
-      },
-      {
-        text: "mdi-linkedin",
-        link: "",
-      },
-      {
-        text: "mdi-instagram",
-        link: "https://instagram.com/joabson_arley/",
-      },
-    ],
-  }),
-};
-</script>

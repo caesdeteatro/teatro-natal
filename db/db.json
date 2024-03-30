@@ -1,0 +1,39 @@
+{
+  "plays": [
+    {
+      "name": "Jacy",
+      "description": "Em pesquisa para um espetáculo teatral, o diretor, ator e dramaturgo Henrique Fontes encontrou uma frasqueira jogada no lixo contendo vestígios de vida de uma mulher de noventa anos. Este fato real levou o grupo a conduzir uma pesquisa que duraria três anos e que, em 2013 resultou na peça de teatro documental intitulada “Jacy”.",
+      "img": "https://jornaldacidade.net/uploads/usuario/2019/10/09//Jacy_Grupo_Carmin_2_-_IAN_RASSARI.jpg",
+      "purchase_link": "https://instagram.com.br/caesdeteatro",
+      "type": "STAGE_PLAY"
+    },
+    {
+      "name": "II Amostra de Cenas Curtas",
+      "description": "Em pesquisa para um espetáculo teatral, o diretor, ator e dramaturgo Henrique Fontes encontrou uma frasqueira jogada no lixo contendo vestígios de vida de uma mulher de noventa anos. Este fato real levou o grupo a conduzir uma pesquisa que duraria três anos e que, em 2013 resultou na peça de teatro documental intitulada “Jacy”.",
+      "img": "https://jornaldacidade.net/uploads/usuario/2019/10/09//Jacy_Grupo_Carmin_2_-_IAN_RASSARI.jpg",
+      "purchase_link": "https://instagram.com.br/caesdeteatro",
+      "type": "STAGE_PLAY"
+    },
+    {
+      "name": "Clenyldes e Clenôrys ou A IRRESOLUTA HISTÓRIA DE PARAÍSO, a maior pequena cidade do mundo",
+      "description": "A dramaturgia, escrita por César Ferrario com colaboração de Márcio Benjamin, narra a história de duas gêmeas bivitelinas de pais diferentes (fato cientificamente comprovado), trazendo consigo uma irônica representação da dualidade universal",
+      "img": "https://i.ibb.co/7rZRBVq/432930689-18271756081203496-6633073548869819199-n.jpg",
+      "purchase_link": "https://instagram.com.br/caesdeteatro",
+      "type": "STAGE_PLAY"
+    },
+    {
+      "name": "O Santo e a Porca",
+      "description": "A dramaturgia, escrita por César Ferrario com colaboração de Márcio Benjamin, narra a história de duas gêmeas bivitelinas de pais diferentes (fato cientificamente comprovado), trazendo consigo uma irônica representação da dualidade universal",
+      "img": "https://i.ibb.co/7rZRBVq/432930689-18271756081203496-6633073548869819199-n.jpg",
+      "purchase_link": "https://instagram.com.br/caesdeteatro",
+      "type": "STAGE_PLAY"
+    },
+    {
+      "name": "Cães, o Espetáculo",
+      "description": "Quando um roubo dá errado, quatro assaltantes se veem presos em um armazém com um deles ferido, e em meio ao caos precisam descobrir quem é o traidor entre eles.",
+      "img": "https://i.ibb.co/RNK2pzy/espetaculo-caes.png",
+      "purchase_link": "https://instagram.com.br/caesdeteatro",
+      "type": "STAGE_PLAY"
+    }
+  ]
+}

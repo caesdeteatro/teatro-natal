@@ -1,6 +1,6 @@
 <template>
-  <section id="hero" class="mt-6">
-    <v-row align="center" justify="center" class="teste hidden-md-and-down">
+  <section id="hero">
+    <!-- <v-row align="center" justify="center" class="teste hidden-md-and-down">
       <v-col cols="10">
         <v-row align="center" justify="center">
           <v-col cols="6" md="12" xl="6" lg="6">
@@ -21,12 +21,30 @@
           </v-col>
         </v-row>
       </v-col>
-    </v-row>
+    </v-row> -->
 
     <v-row align="center" justify="center" class="teste d-md-none">
       <v-col cols="12">
-        <div class="responsiveImage">
-          <img height="220px" src="https://i.ibb.co/7rZRBVq/432930689-18271756081203496-6633073548869819199-n.jpg" />
+        <div class="testere">
+          <div>
+            <Flicking
+              :plugins="plugins"
+              :options="{
+                renderOnlyVisible: true,
+                defaultIndex: 2,
+                align: prev,
+                circular: true,
+              }"
+            >
+              <div
+                class="responsiveImage"
+                v-for="(data, index) in stage_plays"
+                :key="index"
+              >
+                <img height="300" width="100" :src="data.img" />
+              </div>
+            </Flicking>
+          </div>
         </div>
 
         <div class="onlyText">
@@ -42,10 +60,47 @@
 </template>
 
 <script>
+import { AutoPlay } from "@egjs/flicking-plugins";
+
+const plugins = [
+  new AutoPlay({ duration: 2300, direction: "NEXT", stopOnHover: false }),
+];
 export default {
   data() {
     return {
+      plugins,
       dialog: false,
+      stage_plays: [
+        {
+          name: "Jacy",
+          description:
+            "Em pesquisa para um espetáculo teatral, o diretor, ator e dramaturgo Henrique Fontes encontrou uma frasqueira jogada no lixo contendo vestígios de vida de uma mulher de noventa anos. Este fato real levou o grupo a conduzir uma pesquisa que duraria três anos e que, em 2013 resultou na peça de teatro documental intitulada “Jacy”.",
+          img: "https://images.sympla.com.br/6603125c6bd7b-lg.jpg",
+          purchase_link:
+            "https://www.sympla.com.br/evento/espetaculo-jacy-no-teatro-alberto-maranhao/2391168",
+          type: "STAGE",
+          hasPurchaseLink: true,
+        },
+        {
+          name: "Clenyldes e Clenôrys ou A IRRESOLUTA HISTÓRIA DE PARAÍSO, a maior pequena cidade do mundo",
+          description:
+            "A dramaturgia, escrita por César Ferrario com colaboração de Márcio Benjamin, narra a história de duas gêmeas bivitelinas de pais diferentes (fato cientificamente comprovado), trazendo consigo uma irônica representação da dualidade universal",
+          img: "https://i.ibb.co/7rZRBVq/432930689-18271756081203496-6633073548869819199-n.jpg",
+          purchase_link: "https://www.instagram.com/casadezoe/",
+          type: "STAGE",
+          hasPurchaseLink: false,
+        },
+        {
+          name: "O Santo e a Porca",
+          description:
+            "O Santo e a Porca é uma adaptação da obra do mestre Ariano Suassuna, encenada pelo Grupo de Teatro Baobá e narra a trajetória de um velho avarento conhecido como Euricão Árabe. O protagonista é devoto de Santo Antônio e guarda as economias de toda a vida numa porca de madeira. Ao receber uma carta de Eudoro dizendo que este iria privá-lo de seu precioso tesouro, Euricão fica apreensivo achando que Eudoro irá pedir o dinheiro da porca. Caroba, a empregada da casa, entende a situação, e decide se aproveitar para arranjar algum dinheiro e se casar com Pinhão, seu noivo. E é aí que começa a confusão..",
+          img: "https://images.sympla.com.br/6603376e26524-lg.jpg",
+          purchase_link:
+            "https://www.sympla.com.br/evento/espetaculo-o-santo-e-a-porca/2396853",
+          type: "STAGE",
+          hasPurchaseLink: true,
+        },
+      ],
     };
   },
   methods: {},
@@ -54,6 +109,10 @@ export default {
 
 <style lang="scss" scoped>
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+.testere {
+  width: 100vw;
+}
 
 .teste {
   height: 90vh;

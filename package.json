@@ -4,16 +4,20 @@
     "private": true,
     "scripts": {
         "serve": "vue-cli-service serve",
-        "build": "vue-cli-service build"
+        "build": "vue-cli-service build",
+        "backend": "json-server --watch db/db.json"
     },
     "dependencies": {
+        "@egjs/flicking-plugins": "^4.7.1",
         "@egjs/vue-flicking": "^4.11.2",
         "@fortawesome/fontawesome-svg-core": "^6.5.1",
         "@fortawesome/vue-fontawesome": "^2.0.10",
         "@kalimahapps/vue-icons": "^1.4.0",
+        "axios": "^1.6.8",
         "core-js": "^3.8.2",
         "deepai": "^1.0.17",
         "firebase": "^10.9.0",
+        "json-server": "^1.0.0-alpha.23",
         "material-design-icons-iconfont": "^6.7.0",
         "vue": "^2.6.12",
         "vue-youtube-embed": "^2.2.2",
