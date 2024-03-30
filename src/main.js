@@ -6,13 +6,6 @@ import 'material-design-icons-iconfont/dist/material-design-icons.css'
 import Flicking from "@egjs/vue-flicking";
 import "@egjs/vue-flicking/dist/flicking.css";
 
-// import firebase from 'firebase/app'
-// import 'firebase/firestore'
-// firebase.initializeApp({
-//  Configurações do seu app
-// })
-
-// export const db = firebase.firestore()
 
 new Vue({
   vuetify,

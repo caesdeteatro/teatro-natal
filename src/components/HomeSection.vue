@@ -49,10 +49,11 @@
 
         <div class="onlyText">
           <h1 class="mb-6 mainText">Ta afim de consumir teatro?</h1>
-          <span>
+          <span class="mb-10">
             A gente separou pra você as últimas atrações que estão rolando aqui
             em Natal, bora?
           </span>
+
         </div>
       </v-col>
     </v-row>
@@ -62,9 +63,7 @@
 <script>
 import { AutoPlay } from "@egjs/flicking-plugins";
 
-const plugins = [
-  new AutoPlay({ duration: 2300, direction: "NEXT", stopOnHover: false }),
-];
+const plugins = [new AutoPlay({ duration: 2300, direction: "NEXT" })];
 export default {
   data() {
     return {

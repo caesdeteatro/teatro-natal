@@ -14,6 +14,18 @@
             </v-col>
 
             <v-col cols="12" md="7">
+              <div class="d-flex">
+                <v-chip
+                  :color="getEventColor(play.type)"
+                  class="mr-4"
+                  dark
+                  tonal
+                  >{{ getEventType(play.type) }}</v-chip
+                >
+                <v-chip color="#62a089" dark v-if="play.isFree"
+                  >Gratuito</v-chip
+                >
+              </div>
               <h1 class="mb-6">{{ play.name }}</h1>
               <v-row>
                 <v-col cols="12" class="d-flex align-center">
@@ -62,8 +74,7 @@ export default {
           description:
             "Em pesquisa para um espetáculo teatral, o diretor, ator e dramaturgo Henrique Fontes encontrou uma frasqueira jogada no lixo contendo vestígios de vida de uma mulher de noventa anos. Este fato real levou o grupo a conduzir uma pesquisa que duraria três anos e que, em 2013 resultou na peça de teatro documental intitulada “Jacy”.",
           img: "https://images.sympla.com.br/6603125c6bd7b-lg.jpg",
-          link:
-            "https://www.sympla.com.br/evento/espetaculo-jacy-no-teatro-alberto-maranhao/2391168",
+          link: "https://www.sympla.com.br/evento/espetaculo-jacy-no-teatro-alberto-maranhao/2391168",
           type: "STAGE",
           hasPurchaseLink: true,
           isFree: true,
@@ -71,10 +82,9 @@ export default {
         {
           name: "II Festival de Cenas Curtas",
           description:
-            "Os nossos alunos do curso Mestres da Cenas vão subir no palco do Teatro Alberto Maranhão no II Festival de Cenas Curtas do Mestres da Cena! 🎭",
+            "Os nossos alunos do curso Mestres da Cenas vão subir no palco do Teatro Alberto Maranhão no II Festival de Cenas Curtas do Mestres da Cena!",
           img: "https://imagens.outgo.com.br/events/53007/thumb_lg_8af3821c-713b-414a-b5ac-9f781e9828f8.jpeg",
-          link:
-            "https://outgo.com.br/ii-festival-de-cenas-curtas-do-mestres-da-cena137",
+          link: "https://outgo.com.br/ii-festival-de-cenas-curtas-do-mestres-da-cena137",
           type: "STAGE",
           hasPurchaseLink: true,
           isFree: false,
@@ -94,8 +104,7 @@ export default {
           description:
             "O Santo e a Porca narra a trajetória de um velho avarento conhecido como Euricão Árabe. O protagonista é devoto de Santo Antônio e guarda as economias de toda a vida numa porca de madeira. Ao receber uma carta de Eudoro dizendo que este iria privá-lo de seu precioso tesouro, Euricão fica apreensivo achando que Eudoro irá pedir o dinheiro da porca. Caroba, a empregada da casa, entende a situação, e decide se aproveitar para arranjar algum dinheiro e se casar com Pinhão, seu noivo. E é aí que começa a confusão..",
           img: "https://images.sympla.com.br/6603376e26524-lg.jpg",
-          link:
-            "https://www.sympla.com.br/evento/espetaculo-o-santo-e-a-porca/2396853",
+          link: "https://www.sympla.com.br/evento/espetaculo-o-santo-e-a-porca/2396853",
           type: "STAGE",
           hasPurchaseLink: true,
           isFree: false,
@@ -105,8 +114,7 @@ export default {
           description:
             "TOURO {BULL} É um espetáculo que aborda o tema da ancestralidade feminina a partir do ponto de vista da cultura nordestina. A partir das memórias da dançarina e coreógrafa Valéria Pinheiro, reconstruímos alguns dos arquétipos do imaginário nordestino em formato de uma sinfonia de sapateado, sapateios identitários brasileiros: Brinquedos e folguedos têm passos ritmados e batidas de pé.",
           img: "https://images.sympla.com.br/6604514090600-lg.jpg",
-          link:
-            "https://www.sympla.com.br/evento/touro-bull-em-natal/2399912",
+          link: "https://www.sympla.com.br/evento/touro-bull-em-natal/2399912",
           type: "STAGE",
           hasPurchaseLink: true,
           isFree: false,
@@ -126,18 +134,16 @@ export default {
           description:
             "O Lab Cocria, é uma iniciativa que busca descentralizar e democratizar o acesso à formação cultural e à economia criativa, mais que um laboratório de capacitação cultural; é uma oportunidade para os jovens se envolverem em processos participativos inovadores, utilizando o saber cultural como uma ferramenta para gerar emprego, renda e desenvolvimento em suas comunidades.",
           img: "https://i.ibb.co/d5H77BK/labCria.jpg",
-          link:
-            "https://docs.google.com/forms/d/e/1FAIpQLSfUALM0GjAs0hESdg9IcpiSUIHXCqy8FPInxYFFSAE8s4POxA/viewform",
+          link: "https://docs.google.com/forms/d/e/1FAIpQLSfUALM0GjAs0hESdg9IcpiSUIHXCqy8FPInxYFFSAE8s4POxA/viewform",
           type: "WORKSHOP",
-          isFree: false,
+          isFree: true,
         },
         {
           name: "Circuito Urbio",
           description:
             "Será uma experiência de imersão na cidade que a gente habita e que habita a gente, pra quem disposto a explorar as possibilidades de passado, presente e futuro em Natal.",
           img: "https://i.ibb.co/PmsR0cG/urbio.png",
-          link:
-            "https://docs.google.com/forms/d/e/1FAIpQLSeYagkV57rwKotRcT_BlxvIpihDqHRjJwrMLKe68OOovPw2Cg/viewform",
+          link: "https://docs.google.com/forms/d/e/1FAIpQLSeYagkV57rwKotRcT_BlxvIpihDqHRjJwrMLKe68OOovPw2Cg/viewform",
           type: "WORKSHOP",
           isFree: false,
         },
@@ -147,6 +153,12 @@ export default {
   methods: {
     gotToLink(link) {
       window.open(link, "_blank");
+    },
+    getEventType(event) {
+      return event == "STAGE" ? "Espetáculo" : "Oficina";
+    },
+    getEventColor(event) {
+      return event == "STAGE" ? "#5f27cd" : "#cc2434";
     },
   },
 };
